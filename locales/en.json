@@ -1,4 +1,18 @@
 {
     "layout.title" : "Division Dailies",
-    "index.title" : "Welcome to the Division Dailies"
+    "index.title" : "Welcome to the Division Dailies",
+    "index.gear.title":"Gear",
+    "gear.name":"Name",
+    "gear.type":"Type",
+    "gear.arm":"ARM",
+    "gear.credits":"Credits",
+    "gear.lvl":"LVL",
+    "gear.firearms":"FireArms",
+    "gear.stamina":"Stamina",
+    "gear.electronics":"Electronics",
+    "gear.major":"Major",
+    "gear.minor":"Minor",
+    "gear.skill":"Skill",
+    
+    "error500.message":"An error occured. Please try again"
 }
