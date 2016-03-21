@@ -2,7 +2,39 @@
     @html.block('body', function(model){
         <div>
             <p>@model.__('index.title')</p>
-            
+        </div>
+        <div>
+            <h2>@model.__('index.gear.title')</h2>
+            <table>
+                <tr>
+                    <th>@model.__('gear.name')</th>
+                    <th>@model.__('gear.type')</th>
+                    <th>@model.__('gear.arm')</th>
+                    <th>@model.__('gear.credits')</th>
+                    <th>@model.__('gear.lvl')</th>
+                    <th>@model.__('gear.firearms')</th>
+                    <th>@model.__('gear.stamina')</th>
+                    <th>@model.__('gear.electronics')</th>
+                    <th>@model.__('gear.major')</th>
+                    <th>@model.__('gear.minor')</th>
+                    <th>@model.__('gear.skill')</th>
+                </tr>
+                @for(var x = 0; x < model.data.length; x++){
+                   <tr>
+                        <td>@model.data[x].name</td>
+                        <td>@model.data[x].Type</td>
+                        <td>@model.data[x].ARM</td>
+                        <td>@model.data[x].Credits</td>
+                        <td>@model.data[x].LVL</td>
+                        <td>@model.data[x].FireArms</td>
+                        <td>@model.data[x].Stamina</td>
+                        <td>@model.data[x].Electronics</td>
+                        <td>@model.data[x].Major</td>
+                        <td>@model.data[x].Minor</td>
+                        <td>@model.data[x].Skill</td>
+                   </tr>
+                }
+            </table>
         </div>
     })
 })
