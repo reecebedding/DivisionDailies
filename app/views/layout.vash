@@ -5,7 +5,7 @@
         @if(model.title != null){
             @model.title
         }else{
-           var title = "Division Dailies";
+           var title = model.__('layout.title')
            @title
         }
         </title>
@@ -14,9 +14,6 @@
         <section id='body'>
             @html.block('body')
         </section>
-        <footer>
-            <p>The Division Dailies</p>
-        </footer>
         
         @html.block('scripts')
     </body>
