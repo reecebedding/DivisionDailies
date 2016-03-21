@@ -2,9 +2,15 @@
 
 var express = require('express');
 var mongoose = require('mongoose');
+var i18n = require('i18n');
+i18n.configure({
+    locales:['en'],
+    directory:__dirname + '/locales'
+})
 
 var port = process.env.PORT || 3000;
 var app = express();
+app.use(i18n.init);
 
 var controllers = require('./app/controllers');
 controllers.init(app);

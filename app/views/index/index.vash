@@ -1,8 +1,7 @@
 @html.extend('layout', function(model){
     @html.block('body', function(model){
         <div>
-            <p>Welcome to the Division Dailies</p>
-            <p>@model.length</p>
+            <p>@model.__('index.title')</p>
         </div>
     })
 })
