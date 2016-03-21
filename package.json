@@ -1,0 +1,21 @@
+{
+  "name": "division_dailies",
+  "version": "1.0.0",
+  "description": "Website for The Division game that provides the current daily items and challenges",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "the",
+    "division",
+    "dailies"
+  ],
+  "author": "Reece Bedding",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "vash": "^0.11.1"
+  }
+}

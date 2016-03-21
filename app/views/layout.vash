@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+        @if(model.title != null){
+            @model.title
+        }else{
+           var title = "Division Dailies";
+           @title
+        }
+        </title>
+    </head>
+    <body>
+        <section id='body'>
+            @html.block('body')
+        </section>
+        <footer>
+            <p>The Division Dailies</p>
+        </footer>
+        
+        @html.block('scripts')
+    </body>
+</html>
