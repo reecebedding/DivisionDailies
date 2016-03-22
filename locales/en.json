@@ -14,5 +14,10 @@
     "gear.minor":"Minor",
     "gear.skill":"Skill",
     
-    "error500.message":"An error occured. Please try again"
+    "authentication.login.title":"Please Login",
+    
+    "admin.index.title":"Administration",
+    
+    "error500.message":"An error occured. Please try again",
+    "error401.message":"You are unauthorised to view this page"
 }

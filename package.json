@@ -15,9 +15,14 @@
   "author": "Reece Bedding",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
-    "mongoose": "^4.4.8",
+    "express-session": "^1.13.0",
     "i18n": "^0.8.1",
+    "mongoose": "^4.4.8",
+    "passport": "^0.3.2",
+    "passport-reddit": "^0.2.4",
     "vash": "^0.11.1"
   }
 }
