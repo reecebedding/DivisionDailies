@@ -7,7 +7,11 @@ The website provides a list of the current daily items and missions available in
 
 ###### Requirements
 The `npm` manager is requried for dependency managment
-  * NPM `npm install`
+  * npm:  `npm install`
+  
+MongoDb is used for data persistance and user authorisation
+
+Authentication is managed by Reddit oAuth, so having a reddit account is beneficial.
 
 #### Credits
   * [Reece Bedding](https://github.com/reecebedding)
