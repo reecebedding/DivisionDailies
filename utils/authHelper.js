@@ -9,7 +9,7 @@ module.exports = {
         return function(req, res, next){
             UserDetails.find({ username : req.user.name, roles : role }, function(err, docs){
                 if(docs.length > 0){
-                    next();
+                    return next();
                 }
                 res.render('../../app/views/shared/error401.vash');
             })   

@@ -8,15 +8,15 @@ var VendorDetailsSchema = new mongoose.Schema({
     items: {
         gear: [{
             name: String,
-            ARM: Number,
-            Credits: Number,
-            LVL: Number,
-            FireArms: Number,
-            Stamina: Number,
-            Electronics: Number,
-            Major: String,
-            Minor: String,
-            Skill: String
+            arm: Number,
+            credits: Number,
+            lvl: Number,
+            firearms: Number,
+            stamina: Number,
+            electronics: Number,
+            major: String,
+            minor: String,
+            skill: String
         }]
     }
 });

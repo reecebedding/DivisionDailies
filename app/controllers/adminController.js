@@ -5,18 +5,16 @@ var VendorDetails = require('../models/vendorDetails.js').VendorDetails;
 
 (function(controllers){
     controllers.init = function(app){
-//        app.get('/admin/', ensureAuthenticated, ensureAuthorised('admin'), (req, res) => {
-//            res.render("admin/index")
-//        });
-        app.get('/admin', (req, res) => {
-            res.render('admin/index');
-        });
+        app.get('/admin/', ensureAuthenticated, ensureAuthorised('admin'), (req, res) => {
+            res.render("admin/index")
+        });   
         
-        app.post('/admin/api/vendor', (req, res) => {
+        app.post('/admin/api/vendor', ensureAuthenticated, ensureAuthorised('admin'), (req, res) => {
             var newVendor = new VendorDetails(req.body);
             newVendor.save(function(err){
                if (err) {
-                   console.log(err);
+                   console.log('Unable to add new vendor: ' + err);
+                   res.status(500).send('Unable to add new vendor.');
                }else{
                    return res.status(200).send('Created');
                } 
