@@ -15,6 +15,7 @@
   "author": "Reece Bedding",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.2",
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",

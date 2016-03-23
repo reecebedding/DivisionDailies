@@ -1,23 +1,22 @@
 {
-    "layout.title" : "Division Dailies",
-    "index.title" : "Welcome to the Division Dailies",
-    "index.gear.title":"Gear",
-    "gear.name":"Name",
-    "gear.type":"Type",
-    "gear.arm":"ARM",
-    "gear.credits":"Credits",
-    "gear.lvl":"LVL",
-    "gear.firearms":"FireArms",
-    "gear.stamina":"Stamina",
-    "gear.electronics":"Electronics",
-    "gear.major":"Major",
-    "gear.minor":"Minor",
-    "gear.skill":"Skill",
-    
-    "authentication.login.title":"Please Login",
-    
-    "admin.index.title":"Administration",
-    
-    "error500.message":"An error occured. Please try again",
-    "error401.message":"You are unauthorised to view this page"
+	"layout.title": "Division Dailies",
+	"index.title": "Welcome to the Division Dailies",
+	"index.gear.title": "Gear",
+	"gear.name": "Name",
+	"gear.arm": "ARM",
+	"gear.credits": "Credits",
+	"gear.lvl": "LVL",
+	"gear.firearms": "FireArms",
+	"gear.stamina": "Stamina",
+	"gear.electronics": "Electronics",
+	"gear.major": "Major",
+	"gear.minor": "Minor",
+	"gear.skill": "Skill",
+	"authentication.login.title": "Please Login",
+	"admin.index.title": "Administration",
+	"admin.index.vendor.name": "Vendor Name",
+	"error500.message": "An error occured. Please try again",
+	"error401.message": "You are unauthorised to view this page",
+	"admin.index.add.gear": "Add gear item",
+	"admin.index.save": "Save vendor details"
 }

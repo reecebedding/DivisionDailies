@@ -1,4 +1,4 @@
-var GearDetails = require('../models/gearDetails.js').GearDetails;
+var VendorDetails = require('../models/vendorDetails.js').VendorDetails;
 
 (function(controllers){
     controllers.init = function(app){
