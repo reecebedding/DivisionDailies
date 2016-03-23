@@ -30,5 +30,10 @@
 	"weapon.dmg": "DMG",
 	"weapon.rpm": "RPM",
 	"weapon.mag": "MAG",
-	"weapon.talent": "Talent"
+	"weapon.talent": "Talent",
+	"admin.index.mods.title": "Mods",
+	"admin.index.add.mod": "Add mod",
+	"mod.name": "Name",
+	"mod.credits": "Credits",
+	"mod.major": "Major"
 }

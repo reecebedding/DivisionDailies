@@ -4,12 +4,17 @@ angular.module('AdminIndex.controllers', []).
             'name':'',
             'items':{
                 'gear':[{}],
-                'weapons':[{}]
+                'weapons':[{}],
+                'mods':[{}]
             }
         };
     
         $scope.addGearItem = function(){
             $scope.newVendorSet.items.gear.push({});
+        };
+    
+        $scope.addModItem = function(){
+            $scope.newVendorSet.items.mods.push({});
         };
     
         $scope.addWeaponItem = function(){

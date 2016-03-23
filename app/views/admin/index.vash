@@ -61,6 +61,23 @@
                 </tr>
             </table>
             
+            <hr />
+            
+            <h1>@model.__('admin.index.mods.title')</h1>
+            <button ng-click="addModItem();">@model.__('admin.index.add.mod')</button>
+            <table>
+                <tr>
+                    <th>@model.__('mod.name')</th>
+                    <th>@model.__('mod.credits')</th>
+                    <th>@model.__('mod.major')</th>
+                </tr>
+                <tr ng-repeat="mod in newVendorSet.items.mods">
+                    <td><input type="text" ng-model="mod.name"/></td>
+                    <td><input type="number" ng-model="mod.credits"/></td>
+                    <td><input type="text" ng-model="mod.major"/></td>
+                </tr>
+            </table>
+            
             <button ng-click="saveData()">@model.__('admin.index.save')</button>
         </div>
     })

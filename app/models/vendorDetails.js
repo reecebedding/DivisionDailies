@@ -27,6 +27,11 @@ var VendorDetailsSchema = new mongoose.Schema({
             rpm: Number,
             mag: Number,
             talent: String
+        }],
+        mods: [{
+            name: String,
+            credits: Number,
+            major: String
         }]
     }
 });
