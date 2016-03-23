@@ -18,5 +18,17 @@
 	"error500.message": "An error occured. Please try again",
 	"error401.message": "You are unauthorised to view this page",
 	"admin.index.add.gear": "Add gear item",
-	"admin.index.save": "Save vendor details"
+	"admin.index.save": "Save vendor details",
+	"admin.index.gear.title": "Gear",
+	"admin.index.weapons.title": "Weapons",
+	"admin.index.weapon.title": "Weapons",
+	"admin.index.add.weapon": "Add weapon item",
+	"weapon.name": "Name",
+	"weapon.weaponType": "Type",
+	"weapon.dps": "DPS",
+	"weapon.credits": "Credits",
+	"weapon.dmg": "DMG",
+	"weapon.rpm": "RPM",
+	"weapon.mag": "MAG",
+	"weapon.talent": "Talent"
 }

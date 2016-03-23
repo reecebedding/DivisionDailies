@@ -5,6 +5,7 @@
             
             
             <h2>@model.__('admin.index.vendor.name')<input type="text" ng-model="newVendorSet.name" /></h2>
+            <h1>@model.__('admin.index.gear.title')</h1>
             <button ng-click="addGearItem();">@model.__('admin.index.add.gear')</button>
             <table>
                 <tr>
@@ -32,6 +33,34 @@
                     <td><input type="text" ng-model="gear.skill"/></td>
                 </tr>
             </table>
+            
+            <hr />
+            
+            <h1>@model.__('admin.index.weapon.title')</h1>
+            <button ng-click="addWeaponItem();">@model.__('admin.index.add.weapon')</button>
+            <table>
+                <tr>
+                    <th>@model.__('weapon.name')</th>
+                    <th>@model.__('weapon.weaponType')</th>
+                    <th>@model.__('weapon.dps')</th>
+                    <th>@model.__('weapon.credits')</th>
+                    <th>@model.__('weapon.dmg')</th>
+                    <th>@model.__('weapon.rpm')</th>
+                    <th>@model.__('weapon.mag')</th>
+                    <th>@model.__('weapon.talent')</th>
+                </tr>
+                <tr ng-repeat="weapon in newVendorSet.items.weapons">
+                    <td><input type="text" ng-model="weapon.name"/></td>
+                    <td><input type="text" ng-model="weapon.weaponType"/></td>
+                    <td><input type="number" ng-model="weapon.dps"/></td>
+                    <td><input type="number" ng-model="weapon.credits"/></td>
+                    <td><input type="number" ng-model="weapon.dmg"/></td>
+                    <td><input type="number" ng-model="weapon.rpm"/></td>
+                    <td><input type="number" ng-model="weapon.mag"/></td>
+                    <td><input type="text" ng-model="weapon.talent"/></td>
+                </tr>
+            </table>
+            
             <button ng-click="saveData()">@model.__('admin.index.save')</button>
         </div>
     })

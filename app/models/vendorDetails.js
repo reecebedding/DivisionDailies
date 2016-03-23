@@ -17,6 +17,16 @@ var VendorDetailsSchema = new mongoose.Schema({
             major: String,
             minor: String,
             skill: String
+        }],
+        weapons: [{
+            name: String,
+            weaponType: String,
+            dps: Number,
+            credits: Number,
+            dmg: Number,
+            rpm: Number,
+            mag: Number,
+            talent: String
         }]
     }
 });

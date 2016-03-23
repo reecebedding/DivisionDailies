@@ -3,12 +3,17 @@ angular.module('AdminIndex.controllers', []).
         $scope.newVendorSet = {
             'name':'',
             'items':{
-                'gear':[{}]
+                'gear':[{}],
+                'weapons':[{}]
             }
         };
     
         $scope.addGearItem = function(){
             $scope.newVendorSet.items.gear.push({});
+        };
+    
+        $scope.addWeaponItem = function(){
+            $scope.newVendorSet.items.weapons.push({});
         };
 
         $scope.saveData = function(){
