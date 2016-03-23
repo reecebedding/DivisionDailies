@@ -35,5 +35,9 @@
 	"admin.index.add.mod": "Add mod",
 	"mod.name": "Name",
 	"mod.credits": "Credits",
-	"mod.major": "Major"
+	"mod.major": "Major",
+	"admin.index.appearance.title": "Appearance",
+	"admin.index.add.appearance": "Add appearance item",
+	"appearance.name": "Name",
+	"appearance.lvl": "LVL"
 }

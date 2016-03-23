@@ -78,6 +78,19 @@
                 </tr>
             </table>
             
+            <h1>@model.__('admin.index.appearance.title')</h1>
+            <button ng-click="addAppearanceItem();">@model.__('admin.index.add.appearance')</button>
+            <table>
+                <tr>
+                    <th>@model.__('appearance.name')</th>
+                    <th>@model.__('appearance.lvl')</th>
+                </tr>
+                <tr ng-repeat="appearance in newVendorSet.items.appearance">
+                    <td><input type="text" ng-model="appearance.name"/></td>
+                    <td><input type="number" ng-model="appearance.lvl"/></td>
+                </tr>
+            </table>
+            
             <button ng-click="saveData()">@model.__('admin.index.save')</button>
         </div>
     })

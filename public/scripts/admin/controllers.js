@@ -5,7 +5,8 @@ angular.module('AdminIndex.controllers', []).
             'items':{
                 'gear':[{}],
                 'weapons':[{}],
-                'mods':[{}]
+                'mods':[{}],
+                'appearance':[{}]
             }
         };
     
@@ -19,6 +20,9 @@ angular.module('AdminIndex.controllers', []).
     
         $scope.addWeaponItem = function(){
             $scope.newVendorSet.items.weapons.push({});
+        };
+        $scope.addAppearanceItem = function(){
+            $scope.newVendorSet.items.appearance.push({});
         };
 
         $scope.saveData = function(){

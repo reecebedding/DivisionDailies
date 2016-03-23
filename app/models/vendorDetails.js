@@ -32,6 +32,10 @@ var VendorDetailsSchema = new mongoose.Schema({
             name: String,
             credits: Number,
             major: String
+        }],
+        appearance: [{
+            name: String,
+            lvl: Number
         }]
     }
 });
