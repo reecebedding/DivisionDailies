@@ -1,13 +1,13 @@
 @html.extend('layout', function(model){
     @html.block('body', function(model){
         <div ng-app="Index" ng-controller="IndexController">
-            <div>
+            <div class="page-title">
                 <p>@model.__('index.title')</p>
             </div>
-            <div ng-repeat="vendor in vendorDetails">
-                <h2>{{ vendor.name }}</h2>
+            <div class="vendor-details" ng-repeat="vendor in vendorDetails">
+                <h3>{{ vendor.name }}</h3>
                 <div>
-                    <h2>@model.__('index.gear.title')</h2>
+                    <h4>@model.__('index.gear.title')</h4>
                     <table class="table table-striped table-hover table-bordered table-condensed">
                         <tr>
                             <th>@model.__('gear.name')</th>
@@ -36,7 +36,7 @@
                     </table>
                 </div>
                 <div>
-                    <h2>@model.__('index.weapon.title')</h2>
+                    <h4>@model.__('index.weapon.title')</h4>
                     <table class="table table-striped table-hover table-bordered table-condensed">
                         <tr>
                             <th>@model.__('weapon.name')</th>
@@ -61,7 +61,7 @@
                     </table>
                 </div>
                 <div>
-                    <h2>@model.__('index.mod.title')</h2>
+                    <h4>@model.__('index.mod.title')</h4>
                     <table class="table table-striped table-hover table-bordered table-condensed">
                         <tr>
                             <th>@model.__('mod.name')</th>
@@ -76,7 +76,7 @@
                     </table>
                 </div>
                 <div>
-                    <h2>@model.__('index.appearance.title')</h2>
+                    <h4>@model.__('index.appearance.title')</h4>
                     <table class="table table-striped table-hover table-bordered table-condensed">
                         <tr>
                             <th>@model.__('appearance.name')</th>
