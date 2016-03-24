@@ -8,7 +8,8 @@ var VendorDetails = require('../models/vendorDetails.js').VendorDetails;
                    console.log('An error occured: ' + err);
                    res.render('shared/error500.vash');
                }else{
-                   res.render('index/index', { data: docs , user: req.user});
+                   console.log(JSON.stringify(docs));
+                   res.render('index/index', { data: docs });
                }
            })
         })
