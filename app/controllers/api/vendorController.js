@@ -1,16 +1,16 @@
-var VendorDetails = require('../models/vendorDetails.js').VendorDetails;
+var VendorDetails = require('../../models/vendorDetails.js').VendorDetails;
 
 (function(controllers){
     controllers.init = function(app){
-        app.get('/', (req, res) => {
+        app.get('/api/vendor', (req, res) => {
             VendorDetails.find({}, function(err, docs){
                if(err){
                    console.log('An error occured: ' + err);
-                   res.render('shared/error500.vash');
+                   res.status(500).send('An error occured.');
                }else{
-                   res.render('index/index', { data: docs });
+                   res.json(docs);
                }
            })
-        })
+        });
     }
 })(module.exports);

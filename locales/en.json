@@ -1,7 +1,6 @@
 {
 	"layout.title": "Division Dailies",
 	"index.title": "Welcome to the Division Dailies",
-	"index.gear.title": "Gear",
 	"gear.name": "Name",
 	"gear.arm": "ARM",
 	"gear.credits": "Credits",
@@ -39,5 +38,9 @@
 	"admin.index.appearance.title": "Appearance",
 	"admin.index.add.appearance": "Add appearance item",
 	"appearance.name": "Name",
-	"appearance.lvl": "LVL"
+	"appearance.lvl": "LVL",
+	"index.gear.title": "Gear",
+	"index.weapon.title": "Weapons",
+	"index.mod.title": "Mods",
+	"index.appearance.title": "Appearance"
 }
