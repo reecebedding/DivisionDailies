@@ -15,6 +15,7 @@
             @html.block('body')
         </section>
         
+        <script src="scripts/angular.min.js"></script>
         @html.block('scripts')
     </body>
 </html>

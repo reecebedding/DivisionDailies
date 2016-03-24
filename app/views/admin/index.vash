@@ -1,5 +1,122 @@
 @html.extend('layout', function(model){
     @html.block('body', function(model){
-        <h3>@model.__('admin.index.title')</h3>
+        <div ng-app="AdminIndex" ng-controller="AdminController">
+            <h1>@model.__('admin.index.title')</h1>
+            
+            
+            <h2>
+                @model.__('admin.index.vendor.name')
+                <!-- <input type="text" ng-model="newVendorSet.name" /> -->
+                <select ng-model="newVendorSet.name">
+                    <option>Base of Operations</option>
+                    <option>Camp Hudson</option>
+                    <option>Autumn's Hope</option>
+                    <option>Dante's Run</option>
+                    <option>The Cavern</option>
+                    <option>Madison's Stand</option>
+                    <option>The Ward</option>
+                    <option>Southpaw</option>
+                    <option>The Firewall</option>
+                    <option>Wolves Den</option>
+                    <option>Kerman Station</option>
+                    <option>The Meat Locker</option>
+                    <option>The Last Call</option>
+                    <option>The Grindhouse</option>
+                    <option>the Crypt</option>
+                </select>
+            </h2>
+            <h1>@model.__('admin.index.gear.title')</h1>
+            <button ng-click="addGearItem();">@model.__('admin.index.add.gear')</button>
+            <table>
+                <tr>
+                    <th>@model.__('gear.name')</th>
+                    <th>@model.__('gear.arm')</th>
+                    <th>@model.__('gear.credits')</th>
+                    <th>@model.__('gear.lvl')</th>
+                    <th>@model.__('gear.firearms')</th>
+                    <th>@model.__('gear.stamina')</th>
+                    <th>@model.__('gear.electronics')</th>
+                    <th>@model.__('gear.major')</th>
+                    <th>@model.__('gear.minor')</th>
+                    <th>@model.__('gear.skill')</th>
+                </tr>
+                <tr ng-repeat="gear in newVendorSet.items.gear">
+                    <td><input type="text" ng-model="gear.name"/></td>
+                    <td><input type="number" ng-model="gear.arm"/></td>
+                    <td><input type="number" ng-model="gear.credits"/></td>
+                    <td><input type="number" ng-model="gear.lvl"/></td>
+                    <td><input type="number" ng-model="gear.firearms"/></td>
+                    <td><input type="number" ng-model="gear.stamina"/></td>
+                    <td><input type="number" ng-model="gear.electronics"/></td>
+                    <td><input type="text" ng-model="gear.major"/></td>
+                    <td><input type="text" ng-model="gear.minor"/></td>
+                    <td><input type="text" ng-model="gear.skill"/></td>
+                </tr>
+            </table>
+            
+            <hr />
+            
+            <h1>@model.__('admin.index.weapon.title')</h1>
+            <button ng-click="addWeaponItem();">@model.__('admin.index.add.weapon')</button>
+            <table>
+                <tr>
+                    <th>@model.__('weapon.name')</th>
+                    <th>@model.__('weapon.weaponType')</th>
+                    <th>@model.__('weapon.dps')</th>
+                    <th>@model.__('weapon.credits')</th>
+                    <th>@model.__('weapon.dmg')</th>
+                    <th>@model.__('weapon.rpm')</th>
+                    <th>@model.__('weapon.mag')</th>
+                    <th>@model.__('weapon.talent')</th>
+                </tr>
+                <tr ng-repeat="weapon in newVendorSet.items.weapons">
+                    <td><input type="text" ng-model="weapon.name"/></td>
+                    <td><input type="text" ng-model="weapon.weaponType"/></td>
+                    <td><input type="number" ng-model="weapon.dps"/></td>
+                    <td><input type="number" ng-model="weapon.credits"/></td>
+                    <td><input type="number" ng-model="weapon.dmg"/></td>
+                    <td><input type="number" ng-model="weapon.rpm"/></td>
+                    <td><input type="number" ng-model="weapon.mag"/></td>
+                    <td><input type="text" ng-model="weapon.talent"/></td>
+                </tr>
+            </table>
+            
+            <hr />
+            
+            <h1>@model.__('admin.index.mods.title')</h1>
+            <button ng-click="addModItem();">@model.__('admin.index.add.mod')</button>
+            <table>
+                <tr>
+                    <th>@model.__('mod.name')</th>
+                    <th>@model.__('mod.credits')</th>
+                    <th>@model.__('mod.major')</th>
+                </tr>
+                <tr ng-repeat="mod in newVendorSet.items.mods">
+                    <td><input type="text" ng-model="mod.name"/></td>
+                    <td><input type="number" ng-model="mod.credits"/></td>
+                    <td><input type="text" ng-model="mod.major"/></td>
+                </tr>
+            </table>
+            
+            <h1>@model.__('admin.index.appearance.title')</h1>
+            <button ng-click="addAppearanceItem();">@model.__('admin.index.add.appearance')</button>
+            <table>
+                <tr>
+                    <th>@model.__('appearance.name')</th>
+                    <th>@model.__('appearance.lvl')</th>
+                </tr>
+                <tr ng-repeat="appearance in newVendorSet.items.appearance">
+                    <td><input type="text" ng-model="appearance.name"/></td>
+                    <td><input type="number" ng-model="appearance.lvl"/></td>
+                </tr>
+            </table>
+            
+            <button ng-click="saveData()">@model.__('admin.index.save')</button>
+        </div>
+    })
+    
+    @html.block('scripts', function(model){
+        <script src="scripts/admin/app.js"></script>
+        <script src="scripts/admin/controllers.js"></script>
     })
 })
