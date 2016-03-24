@@ -46,7 +46,7 @@ app.use(bodyParser());
 app.use(session({
     secret: '8568582e-39e0-4e87-8aab-73b7b362462a',
     resave: true,
-    saveUnitialized: true
+    saveUninitialized: true
 }));
 app.use(passport.initialize());
 app.use(passport.session());
