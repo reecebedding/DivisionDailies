@@ -42,11 +42,12 @@ app.set('view engine', 'vash');
 app.use(express.static(__dirname + '/public'));
 app.use(i18n.init);
 app.use(cookieParser());
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 app.use(session({
     secret: '8568582e-39e0-4e87-8aab-73b7b362462a',
     resave: true,
-    saveUnitialized: true
+    saveUninitialized: true
 }));
 app.use(passport.initialize());
 app.use(passport.session());
