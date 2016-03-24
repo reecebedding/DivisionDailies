@@ -9,13 +9,38 @@
            @title
         }
         </title>
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/bootstrap-theme.css">
+        <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        <section id='body'>
-            @html.block('body')
-        </section>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> -->
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">Division Dailies</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                   
+                  </ul>
+                </div>
+              </div>
+        </nav>
+        <div class="container">
+            <section id='body'>
+                @html.block('body')
+            </section>
+        </div>
         
+        <script src="scripts/jquery.min.js"></script>
         <script src="scripts/angular.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>        
         @html.block('scripts')
     </body>
 </html>

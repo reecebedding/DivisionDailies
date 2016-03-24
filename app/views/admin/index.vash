@@ -4,9 +4,8 @@
             <h1>@model.__('admin.index.title')</h1>
             
             
-            <h2>
+            <h3>
                 @model.__('admin.index.vendor.name')
-                <!-- <input type="text" ng-model="newVendorSet.name" /> -->
                 <select ng-model="newVendorSet.name">
                     <option>Base of Operations</option>
                     <option>Camp Hudson</option>
@@ -24,8 +23,8 @@
                     <option>The Grindhouse</option>
                     <option>the Crypt</option>
                 </select>
-            </h2>
-            <h1>@model.__('admin.index.gear.title')</h1>
+            </h3>
+            <h3>@model.__('admin.index.gear.title')</h3>
             <button ng-click="addGearItem();">@model.__('admin.index.add.gear')</button>
             <table>
                 <tr>
@@ -56,7 +55,7 @@
             
             <hr />
             
-            <h1>@model.__('admin.index.weapon.title')</h1>
+            <h3>@model.__('admin.index.weapon.title')</h3>
             <button ng-click="addWeaponItem();">@model.__('admin.index.add.weapon')</button>
             <table>
                 <tr>
@@ -83,7 +82,7 @@
             
             <hr />
             
-            <h1>@model.__('admin.index.mods.title')</h1>
+            <h3>@model.__('admin.index.mods.title')</h3>
             <button ng-click="addModItem();">@model.__('admin.index.add.mod')</button>
             <table>
                 <tr>
@@ -98,7 +97,7 @@
                 </tr>
             </table>
             
-            <h1>@model.__('admin.index.appearance.title')</h1>
+            <h3>@model.__('admin.index.appearance.title')</h3>
             <button ng-click="addAppearanceItem();">@model.__('admin.index.add.appearance')</button>
             <table>
                 <tr>
