@@ -1,102 +1,98 @@
 @html.extend('layout', function(model){
     @html.block('body', function(model){
-        <div>
-            <p>@model.__('index.title')</p>
+        <div ng-app="Index" ng-controller="IndexController">
+            <div>
+                <p>@model.__('index.title')</p>
+            </div>
+            <div ng-repeat="vendor in vendorDetails">
+                <h2>{{ vendor.name }}</h2>
+                <div>
+                    <h2>@model.__('index.gear.title')</h2>
+                    <table>
+                        <tr>
+                            <th>@model.__('gear.name')</th>
+                            <th>@model.__('gear.arm')</th>
+                            <th>@model.__('gear.credits')</th>
+                            <th>@model.__('gear.lvl')</th>
+                            <th>@model.__('gear.firearms')</th>
+                            <th>@model.__('gear.stamina')</th>
+                            <th>@model.__('gear.electronics')</th>
+                            <th>@model.__('gear.major')</th>
+                            <th>@model.__('gear.minor')</th>
+                            <th>@model.__('gear.skill')</th>
+                        </tr>
+                        <tr ng-repeat="gear in vendor.items.gear">
+                            <td>{{ gear.name }}</td>
+                            <td>{{ gear.arm }}</td>
+                            <td>{{ gear.credits }}</td>
+                            <td>{{ gear.lvl }}</td>
+                            <td>{{ gear.firearms }}</td>
+                            <td>{{ gear.stamina }}</td>
+                            <td>{{ gear.electronics }}</td>
+                            <td>{{ gear.major }}</td>
+                            <td>{{ gear.minor }}</td>
+                            <td>{{ gear.skill }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2>@model.__('index.weapon.title')</h2>
+                    <table>
+                        <tr>
+                            <th>@model.__('weapon.name')</th>
+                            <th>@model.__('weapon.weaponType')</th>
+                            <th>@model.__('weapon.dps')</th>
+                            <th>@model.__('weapon.credits')</th>
+                            <th>@model.__('weapon.dmg')</th>
+                            <th>@model.__('weapon.rpm')</th>
+                            <th>@model.__('weapon.mag')</th>
+                            <th>@model.__('weapon.talent')</th>
+                        </tr>
+                        <tr ng-repeat="weapon in vendor.items.weapons">
+                            <td>{{ weapon.name }}</td>
+                            <td>{{ weapon.weaponType }}</td>
+                            <td>{{ weapon.dps }}</td>
+                            <td>{{ weapon.credits }}</td>
+                            <td>{{ weapon.dmg }}</td>
+                            <td>{{ weapon.rpm }}</td>
+                            <td>{{ weapon.mag }}</td>
+                            <td>{{ weapon.talent }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2>@model.__('index.mod.title')</h2>
+                    <table>
+                        <tr>
+                            <th>@model.__('mod.name')</th>
+                            <th>@model.__('mod.credits')</th>
+                            <th>@model.__('mod.major')</th>
+                        </tr>
+                        <tr ng-repeat="mod in vendor.items.mods">
+                            <td>{{ mod.name }}</td>
+                            <td>{{ mod.credits }}</td>
+                            <td>{{ mod.major }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h2>@model.__('index.appearance.title')</h2>
+                    <table>
+                        <tr>
+                            <th>@model.__('appearance.name')</th>
+                            <th>@model.__('appearance.lvl')</th>
+                        </tr>
+                        <tr ng-repeat="appearance in vendor.items.appearance">
+                            <td>{{ appearance.name }}</td>
+                            <td>{{ appearance.lvl }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-        @for(var x = 0; x < model.data.length; x++){
-            <div>
-                <h2>@model.__('index.gear.title')</h2>
-                <table>
-                    <tr>
-                        <th>@model.__('gear.name')</th>
-                        <th>@model.__('gear.arm')</th>
-                        <th>@model.__('gear.credits')</th>
-                        <th>@model.__('gear.lvl')</th>
-                        <th>@model.__('gear.firearms')</th>
-                        <th>@model.__('gear.stamina')</th>
-                        <th>@model.__('gear.electronics')</th>
-                        <th>@model.__('gear.major')</th>
-                        <th>@model.__('gear.minor')</th>
-                        <th>@model.__('gear.skill')</th>
-                    </tr>
-                    @for(var i = 0; i < model.data[x].items.gear.length; i++){
-                        var currentItem = [].concat(model.data[x].items.gear)
-                        <tr>
-                            <td>@currentItem[i].name</td>
-                            <td>@currentItem[i].arm</td>
-                            <td>@currentItem[i].credits</td>
-                            <td>@currentItem[i].lvl</td>
-                            <td>@currentItem[i].firearms</td>
-                            <td>@currentItem[i].stamina</td>
-                            <td>@currentItem[i].electronics</td>
-                            <td>@currentItem[i].major</td>
-                            <td>@currentItem[i].skill</td>
-                        </tr>
-                    }
-                </table>
-            </div>
-            <div>
-                <h2>@model.__('index.weapon.title')</h2>
-                <table>
-                    <tr>
-                        <th>@model.__('weapon.name')</th>
-                        <th>@model.__('weapon.weaponType')</th>
-                        <th>@model.__('weapon.dps')</th>
-                        <th>@model.__('weapon.credits')</th>
-                        <th>@model.__('weapon.dmg')</th>
-                        <th>@model.__('weapon.rpm')</th>
-                        <th>@model.__('weapon.mag')</th>
-                        <th>@model.__('weapon.talent')</th>
-                    </tr>
-                    @for(var i = 0; i < model.data[x].items.weapons.length; i++){
-                        var currentItem = [].concat(model.data[x].items.weapons)
-                        <tr>
-                            <td>@currentItem[i].name</td>
-                            <td>@currentItem[i].weaponType</td>
-                            <td>@currentItem[i].dps</td>
-                            <td>@currentItem[i].credits</td>
-                            <td>@currentItem[i].dmg</td>
-                            <td>@currentItem[i].rpm</td>
-                            <td>@currentItem[i].mag</td>
-                            <td>@currentItem[i].talent</td>
-                        </tr>
-                    }
-                </table>
-            </div>
-            <div>
-                <h2>@model.__('index.mod.title')</h2>
-                <table>
-                    <tr>
-                        <th>@model.__('mod.name')</th>
-                        <th>@model.__('mod.credits')</th>
-                        <th>@model.__('mod.major')</th>
-                    </tr>
-                    @for(var i = 0; i < model.data[x].items.mods.length; i++){
-                        var currentItem = [].concat(model.data[x].items.mods)
-                        <tr>
-                            <td>@currentItem[i].name</td>
-                            <td>@currentItem[i].credits</td>
-                            <td>@currentItem[i].major</td>
-                        </tr>
-                    }
-                </table>
-            </div>
-            <div>
-                <h2>@model.__('index.appearance.title')</h2>
-                <table>
-                    <tr>
-                        <th>@model.__('appearance.name')</th>
-                        <th>@model.__('appearance.lvl')</th>
-                    </tr>
-                    @for(var i = 0; i < model.data[x].items.appearance.length; i++){
-                        var currentGear = [].concat(model.data[x].items.appearance)
-                        <tr>
-                            <td>@currentGear[i].name</td>
-                            <td>@currentGear[i].lvl</td>
-                        </tr>
-                    }
-                </table>
-            </div>
-        }
+    });
+    @html.block('scripts', function(model){
+        <script src="scripts/index/app.js"></script>
+        <script src="scripts/index/controllers.js"></script>
     })
 })
